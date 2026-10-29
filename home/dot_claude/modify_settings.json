@@ -17,7 +17,7 @@ secrets='[
   "~/.netrc", "~/.git-credentials", "~/.cargo/credentials.toml", "~/.gradle/gradle.properties",
   "~/.m2/settings.xml", "~/.config/sops/", "~/.android/adbkey",
   "~/.codex/auth.json", "~/.pi/agent/auth.json", "~/.claude.json",
-  "~/.codex/sessions/", "~/.config/chezmoi/",
+  "~/.codex/sessions/", "~/.config/chezmoi/", "~/.dbgate/",
   "~/.zsh_history", "~/.local/share/atuin/",
   "~/Library/Keychains/", "~/Library/Cookies/", "~/Library/Application Support/Bitwarden/",
   "~/.config/op/", "~/Library/Group Containers/*.com.1password/",

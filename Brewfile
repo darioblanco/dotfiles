@@ -100,6 +100,7 @@ cask "keka"
 cask "iina"
 cask "firefox"
 cask "bruno"             # API client; collections are plain files in the repo
+cask "dbgate"            # database client; its saved connections (~/.dbgate) are hidden from agents
 cask "google-drive"
 cask "figma"
 cask "miro"
