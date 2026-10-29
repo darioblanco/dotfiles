@@ -124,7 +124,7 @@
     "Read(~/Library/Application Support/Slack/**)",
     "Read(~/Library/Application Support/discord/**)",
     "Read(~/Library/Cookies/**)",
-    "Read(~/Library/Group Containers/2BUA8C4S2C.com.1password/**)",
+    "Read(~/Library/Group Containers/*.com.1password/**)",
     "Read(~/Library/Keychains/**)"
   ],
   "denyRead": [
@@ -161,7 +161,7 @@
     "~/Library/Application Support/Slack",
     "~/Library/Application Support/discord",
     "~/Library/Cookies",
-    "~/Library/Group Containers/2BUA8C4S2C.com.1password",
+    "~/Library/Group Containers/*.com.1password",
     "~/Library/Keychains"
   ],
   "envVars": [

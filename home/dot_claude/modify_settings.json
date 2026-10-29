@@ -20,7 +20,7 @@ secrets='[
   "~/.codex/sessions/", "~/.config/chezmoi/",
   "~/.zsh_history", "~/.local/share/atuin/",
   "~/Library/Keychains/", "~/Library/Cookies/", "~/Library/Application Support/Bitwarden/",
-  "~/.config/op/", "~/Library/Group Containers/2BUA8C4S2C.com.1password/",
+  "~/.config/op/", "~/Library/Group Containers/*.com.1password/",
   "~/Library/Application Support/Google/Chrome/", "~/Library/Application Support/Firefox/",
   "~/Library/Application Support/Slack/", "~/Library/Application Support/Signal/",
   "~/Library/Application Support/discord/"
