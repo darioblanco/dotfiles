@@ -41,6 +41,7 @@ brew "rustup"
 brew "shellcheck"
 brew "shfmt"
 brew "actionlint"
+brew "gitleaks"          # secret scan, the same check CI runs (`gitleaks git` for the full history)
 brew "darioblanco/tap/pulpo"   # durable, metered coding-agent sessions
 brew "ccusage"            # Claude / Codex usage and cost reports
 brew "mongosh"           # MongoDB shell
