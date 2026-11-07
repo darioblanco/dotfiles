@@ -58,7 +58,7 @@ Then, in order (these need an Apple ID, sudo or a GUI):
 | Flutter | `fvm` (per-project `.fvmrc`, global stable), Xcode, Android Studio, CocoaPods |
 | Containers | Colima (VM with 4 CPUs, 8 GB, sharing only `~/Code`, started at login) + Docker CLI, Compose and Buildx; Apple `container` + `container-compose` (defaults in `~/.config/container/config.toml`) |
 | Kubernetes | kubectl + kubecolor, k9s, kubectx/kubens, stern, helm |
-| Infrastructure | `tenv` (Terraform/OpenTofu per `.terraform-version`), gcloud, Cloudflare `cf` |
+| Infrastructure | `tenv` (Terraform/OpenTofu per `.terraform-version`), gcloud, `cloud-sql-proxy`, Cloudflare `cf` and WARP |
 | Security | Secretive, Bitwarden, Little Snitch, Tailscale |
 
 ## Agentic development
