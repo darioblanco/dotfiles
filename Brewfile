@@ -65,6 +65,7 @@ brew "stern"             # multi-pod logs
 brew "helm"
 brew "kubeconform"
 cask "gcloud-cli"
+brew "cloud-sql-proxy"  # local tunnel to Cloud SQL instances (uses gcloud credentials)
 
 # ── Mobile ─────────────────────────────────────────────────────────────────────
 brew "mas"
@@ -94,6 +95,7 @@ cask "secretive"        # SSH keys in the Secure Enclave
 cask "raycast"
 cask "swiftbar"           # menu-bar items from scripts (Claude limits)
 cask "tailscale-app"
+cask "cloudflare-warp"   # Cloudflare WARP / Zero Trust client (installer may ask for the sudo password)
 cask "logi-options+"
 cask "little-snitch"
 cask "keka"
