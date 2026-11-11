@@ -89,7 +89,8 @@ policy='{
         "dl.google.com", "maven.google.com",
         "cdn.cocoapods.org",
         "registry.terraform.io", "releases.hashicorp.com",
-        "mise-versions.jdx.dev", "mise-java.jdx.dev"
+        "mise.jdx.dev", "mise-versions.jdx.dev", "mise-java.jdx.dev",
+        "formulae.brew.sh"
       ]
     }
   },
