@@ -202,8 +202,8 @@ can reach the network. The setup removes what they could leak and limits where d
     proxy, and `docker build` can read any folder given as its build context;
   - CI fails if the policy loses a rule recorded in `claude/policy-baseline.json`, so weakening
     it takes a deliberate two-file change.
-  - Accepted risk: package caches are writable from the sandbox so builds work, which means a
-    sandboxed command could tamper with a cached dependency.
+  - Accepted risk: package caches and the Flutter SDKs in `~/fvm` are writable from the sandbox
+    so builds work, which means a sandboxed command could tamper with a cached dependency or SDK.
   - Accepted risk: agents can read Claude Code's own session transcripts and memory
     (`~/.claude/projects`), so they can pick up past sessions' memory and context, including
     anything pasted into an earlier session.
