@@ -7,6 +7,13 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 # Node's fetch (Corepack's downloads) honors HTTP(S)_PROXY, which the agent sandboxes set.
 export NODE_USE_ENV_PROXY=1
 
+# CLI telemetry and update pings that the agent sandbox blocks anyway (Homebrew, HashiCorp
+# checkpoint, Turborepo, Wrangler).
+export HOMEBREW_NO_ANALYTICS=1
+export CHECKPOINT_DISABLE=1
+export TURBO_TELEMETRY_DISABLED=1
+export WRANGLER_SEND_METRICS=false
+
 # Testcontainers (Quarkus Dev Services and others) can't find Colima's Docker socket on its own.
 export DOCKER_HOST="unix://$HOME/.colima/default/docker.sock"
 export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
