@@ -50,7 +50,7 @@ policy='{
 
     "excludedCommands": [
       "gh *", "gcloud *", "terraform *",
-      "git fetch *", "git pull *", "git push *",
+      "git fetch *", "git pull *", "git push *", "git ls-remote *",
       "kubectl *", "kubecolor *", "helm *", "stern *",
       "container *", "container-compose *", "docker *", "docker-compose *", "colima *"
     ],
