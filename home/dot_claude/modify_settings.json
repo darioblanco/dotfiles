@@ -26,6 +26,12 @@ secrets='[
   "~/Library/Application Support/discord/"
 ]'
 
+# Which hosts go in sandbox.network.allowedDomains:
+# - yes: package registries and read-only public APIs that the tools here use;
+# - never: hosts where anyone can upload or post (cloud storage buckets, paste and file sharing
+#   sites, telemetry or analytics endpoints), since a sandboxed command could send data there;
+# - not here: work or private hosts (a project's .claude/settings.json or this machine's
+#   ~/.claude/settings.json) and hosts needed now and then (auto mode approves those per command).
 policy='{
   "attribution": { "commit": "", "pr": "", "sessionUrl": false },
 
@@ -44,7 +50,7 @@ policy='{
 
     "excludedCommands": [
       "gh *", "gcloud *", "terraform *",
-      "git fetch *", "git pull *", "git push *",
+      "git fetch *", "git pull *", "git push *", "git ls-remote *",
       "kubectl *", "kubecolor *", "helm *", "stern *",
       "container *", "container-compose *", "docker *", "docker-compose *", "colima *"
     ],
@@ -53,7 +59,8 @@ policy='{
       "allowWrite": [
         "~/Library/pnpm", "~/Library/Caches/pnpm", "~/.npm", "~/.cache/uv", "~/.pub-cache",
         "~/go/pkg/mod", "~/.cargo/registry", "~/.cargo/git", "~/.gradle/caches",
-        "~/Library/Caches/CocoaPods", "~/.cache/node/corepack"
+        "~/Library/Caches/CocoaPods", "~/.cache/node/corepack",
+        "~/fvm", "~/.local/state/mise"
       ]
     },
 
@@ -82,7 +89,8 @@ policy='{
         "dl.google.com", "maven.google.com",
         "cdn.cocoapods.org",
         "registry.terraform.io", "releases.hashicorp.com",
-        "mise-versions.jdx.dev", "mise-java.jdx.dev"
+        "mise.jdx.dev", "mise-versions.jdx.dev", "mise-java.jdx.dev",
+        "formulae.brew.sh"
       ]
     }
   },
