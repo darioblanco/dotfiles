@@ -7,8 +7,9 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 # Node's fetch (Corepack's downloads) honors HTTP(S)_PROXY, which the agent sandboxes set.
 export NODE_USE_ENV_PROXY=1
 
-# CLI telemetry and update pings that the agent sandbox blocks anyway (Homebrew, HashiCorp
-# checkpoint, Turborepo, Wrangler).
+# CLI telemetry and update pings that the agent sandbox blocks anyway: DO_NOT_TRACK for the
+# tools that honour it, plus Homebrew, HashiCorp checkpoint, Turborepo and Wrangler.
+export DO_NOT_TRACK=1
 export HOMEBREW_NO_ANALYTICS=1
 export CHECKPOINT_DISABLE=1
 export TURBO_TELEMETRY_DISABLED=1
