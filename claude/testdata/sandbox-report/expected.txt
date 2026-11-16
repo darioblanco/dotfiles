@@ -3,8 +3,11 @@ commands  sessions  host
        3         2  blocked.example.com
        1         1  other.example.com
 
-Denied paths (last 30 days)
+Denied paths, by the sandbox or by macOS (last 30 days)
 commands  sessions  path
+       1         1  /dev/fd
        1         1  /private/var/db
+       1         1  /var/folders
        1         1  ~/.local/state/mise
+       1         1  ~/Library/Application Support/Example
        1         1  ~/fvm/versions/stable

@@ -5,7 +5,7 @@ SCRIPTS := bootstrap.sh macos/*.sh claude/*.sh home/dot_local/bin/executable_* h
 .PHONY: help install system brew apply diff update defaults awake sleep lint check sandbox-report
 
 help: ## list available commands
-	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 install: ## bootstrap the machine (idempotent)
 	./bootstrap.sh
