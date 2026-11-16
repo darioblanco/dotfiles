@@ -217,7 +217,9 @@ can reach the network. The setup removes what they could leak and limits where d
 - **Codex** keeps its own default sandbox. **pi** has none: use it for trusted work only.
 - **Little Snitch** alerts on new outbound connections from any process.
 
-Use `/sandbox` inside Claude Code to inspect or adjust the policy for a session.
+Use `/sandbox` inside Claude Code to inspect or adjust the policy for a session. Every month or
+two, `make sandbox-report` lists the hosts and paths the sandbox blocked, with counts; allow the
+ones that meet the rule above the policy in `modify_settings.json`.
 
 To use the policy without the rest of this repository, read
 [`home/dot_claude/modify_settings.json`](home/dot_claude/modify_settings.json) first (the
@@ -252,6 +254,7 @@ make diff       # preview dotfile changes
 make apply      # apply dotfiles
 make lint       # what CI runs: shell, workflows, Claude policy
 make check      # lint plus Ghostty config and skills validation
+make sandbox-report  # what the Claude sandbox blocked lately (DAYS=30), to allow in one go
 make help       # every target
 ```
 

@@ -2,7 +2,7 @@
 SHELL := /usr/bin/env bash
 SCRIPTS := bootstrap.sh macos/*.sh claude/*.sh home/dot_local/bin/executable_* home/dot_claude/modify_* home/dot_codex/modify_*
 
-.PHONY: help install system brew apply diff update defaults awake sleep lint check
+.PHONY: help install system brew apply diff update defaults awake sleep lint check sandbox-report
 
 help: ## list available commands
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -44,6 +44,10 @@ lint: ## lint scripts, workflows and the Claude policy (what CI runs)
 	shfmt -d $(SCRIPTS)
 	actionlint
 	sh claude/policy-check.sh
+	sh claude/sandbox-report-test.sh
+
+sandbox-report: ## count hosts and paths the Claude sandbox blocked (DAYS=30)
+	@sh claude/sandbox-report.sh
 
 check: lint ## lint, plus Ghostty config and agent skills validation (needs the apps)
 	ghostty +validate-config --config-file=home/dot_config/ghostty/config
